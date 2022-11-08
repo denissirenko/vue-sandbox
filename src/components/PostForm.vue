@@ -1,9 +1,14 @@
 <template>
   <form @submit.prevent>
-    <h2>Create new post</h2>
+    <h3>Create new post</h3>
     <MyInput v-model="post.title" class="input" type="text" placeholder="add title" />
     <MyInput v-model="post.body" class="input" type="text" placeholder="add description" />
-    <MyButton class="btn-form" @click="createPost">add post</MyButton>
+    <MyButton
+      :disabled="post.title.length === 0 || post.body.length === 0"
+      class="btn-form"
+      @click="createPost"
+      >add post</MyButton
+    >
   </form>
 </template>
 

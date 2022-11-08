@@ -18,4 +18,8 @@ export default {
   background-color: teal;
   border: 1px solid teal;
 }
+.btn:disabled {
+  opacity: 0.7;
+  cursor: auto;
+}
 </style>

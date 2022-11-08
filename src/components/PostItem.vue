@@ -1,11 +1,12 @@
 <template>
   <div class="post">
     <div class="post-inner">
+      <div><strong>Post:</strong> {{ post.id }}</div>
       <div><strong>Name:</strong> {{ post.title }}</div>
       <div><strong>Description:</strong> {{ post.body }}</div>
     </div>
     <div class="post-btns">
-      <MyButton>Remove</MyButton>
+      <MyButton @click="$emit('remove', post)">Remove</MyButton>
     </div>
   </div>
 </template>
